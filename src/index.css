@@ -30,6 +30,10 @@ code {
   border: 1px solid #888;
 }
 
+.input .title{
+  font-size: 1rem;
+}
+
 .title {
   font-size: 1.5rem;
   padding: 0.25em;
@@ -43,6 +47,10 @@ code {
   position: relative;
   top: -1px;
   border: 1px solid #888;
+}
+
+.output .title{
+  font-size: 1rem;
 }
 
 .input pre {
