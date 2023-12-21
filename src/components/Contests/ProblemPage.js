@@ -1,6 +1,8 @@
-import { Box, Button, Tab, Tabs, Typography } from '@mui/material'
+import { Box, Button, Tab, Tabs, Typography, makeStyles, useMediaQuery } from '@mui/material'
+// import {makeStyle} from '@mui/style'
 import React, { useState } from 'react'
 import Problem from './ProblemTabs';
+import { useTheme } from '@emotion/react';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -21,23 +23,50 @@ function TabPanel(props) {
         </div>
     );
 }
+
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//       flexGrow: 1,
+//     },
+//     tabs: {
+//       [theme.breakpoints.down('sm')]: {
+//         flexDirection: 'column',
+//       },
+//       flexWrap: 'wrap', // Allow tabs to wrap onto the next line
+//     },
+//   }));
 export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    // const classes = useStyles();
+
     return (
         <div style={{
             width: "100%",
             height: "100%",
             color: "text.primary",
-            alignItems: 'center',
-            display: 'flex',
+            // display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            // justifyContent: 'center',
             backgroundColor: "background.default",
+            flexGrow: '1'
         }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="problem Tabs"
+                // className={classes.tabs}
+                classes={{
+                    [theme.breakpoints.down('sm')]: {
+                        flexDirection: 'column',
+                    },
+                    flexWrap: 'wrap', // Allow tabs to wrap onto the next line
+                }}
+            >
                 {data.problems?.map((obj, idx) => {
                     return (
                         <Tab

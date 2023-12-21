@@ -92,7 +92,7 @@ export const ShowContests = () => {
                                 </TableCell>
                                 <TableCell component="th" scope="row" align="center">
                                     <Link href={`https://codeforces.com/gym/${row.Id}/standings`} target="_blank">
-                                        Final Stadings
+                                        Final Standings
                                     </Link>
                                 </TableCell>
                             </TableRow>
