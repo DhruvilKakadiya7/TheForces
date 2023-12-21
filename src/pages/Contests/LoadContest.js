@@ -15,7 +15,7 @@ export const LoadContest = () => {
     const [mathJaxRendered, setMathJaxRendered] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
-        const url = `http://localhost:5000/scrap/getData?contestId=${id}`;
+        const url = `https://new-theforces-server.onrender.com/scrap/getData?contestId=${id}`;
         const init = async () => {
             try {
                 setLoading(true);

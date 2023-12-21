@@ -27,7 +27,7 @@ export const Rating = () => {
     }
 
     useEffect(() => {
-        const url = 'http://localhost:5000/profiles/getLeaderBoard';
+        const url = 'https://new-theforces-server.onrender.com/profiles/getLeaderBoard';
         const init = async () => {
             try {
                 setLoading(true);

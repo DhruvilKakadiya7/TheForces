@@ -42,7 +42,7 @@ export const ShowProfile = () => {
     useEffect(() => {
         const init = async () => {
             try {
-                let { data } = await axios.get(`http://localhost:5000/profiles/getProfile?handle=${handle}`);
+                let { data } = await axios.get(`https://new-theforces-server.onrender.com/profiles/getProfile?handle=${handle}`);
                 if (data.isProfile === "NO") {
                     navigate('/profiles');
                     return;
