@@ -155,7 +155,7 @@ export default function Problem({ problem, mathJaxRendered, onMathJaxRendered })
                 >
                 </div>
                 <Typography fontWeight={700} fontSize={'1.3rem'} marginTop={1}>
-                    Input
+                    {problemInput? "Input": ""}
                 </Typography>
                 <div
                     className="MathJaxEnd"
@@ -165,7 +165,7 @@ export default function Problem({ problem, mathJaxRendered, onMathJaxRendered })
                 >
                 </div>
                 <Typography fontWeight={700} fontSize={'1.3rem'} marginTop={1}>
-                    Output
+                    {problemOutput? "Output": ""}
                 </Typography>
                 <div
                     className="MathJaxEnd"
