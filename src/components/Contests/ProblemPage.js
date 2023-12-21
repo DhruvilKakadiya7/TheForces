@@ -49,23 +49,19 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
             width: "100%",
             height: "100%",
             color: "text.primary",
-            // display: 'flex',
+            display: 'flex',
             flexDirection: 'column',
-            // justifyContent: 'center',
+            justifyContent: 'center',
             backgroundColor: "background.default",
-            flexGrow: '1'
+            flexGrow: 1,
+            maxWidth: '100%'
         }}>
             <Tabs
                 value={value}
                 onChange={handleChange}
                 aria-label="problem Tabs"
-                // className={classes.tabs}
-                classes={{
-                    [theme.breakpoints.down('sm')]: {
-                        flexDirection: 'column',
-                    },
-                    flexWrap: 'wrap', // Allow tabs to wrap onto the next line
-                }}
+                variant="scrollable"
+                scrollButtons="auto"
             >
                 {data.problems?.map((obj, idx) => {
                     return (
@@ -73,6 +69,12 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
                             fontSize={'1.4rem'}
                             key={idx}
                             label={String.fromCharCode(65 + idx)}
+                            sx={{
+                                maxWidth: '100%',
+                                overflowX: 'auto',
+                            }}
+                            variant={isMobile ? 'scrollable' : 'standard'}
+                            scrollButtons="auto"
                         />
                     );
                 })}
