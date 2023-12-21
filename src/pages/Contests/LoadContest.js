@@ -20,7 +20,6 @@ export const LoadContest = () => {
             try {
                 setLoading(true);
                 const { data } = await axios.get(url);
-                console.log(data.data);
                 setData(data.data);
                 setLoading(false);
             } catch (error) {

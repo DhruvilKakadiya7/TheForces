@@ -86,7 +86,7 @@ const config = {
 };
 
 export default function Problem({ problem, mathJaxRendered, onMathJaxRendered }) {
-    console.log(problem);
+
     let problemStatement = problem?.problemStatement;
     problemStatement = problemStatement?.replace(/\$\$\(/g, '$$');
     problemStatement = problemStatement?.replace(/\$\(/g, '$');
