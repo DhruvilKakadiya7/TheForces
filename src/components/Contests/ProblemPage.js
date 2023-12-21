@@ -1,6 +1,6 @@
 import { Box, Button, Tab, Tabs, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import Problem from './Problem.js';
+import Problem from './ProblemTabs';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
