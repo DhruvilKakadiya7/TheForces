@@ -3,16 +3,17 @@ import Footer from '../../components/Footer/Footer';
 import Page500 from '../../components/Page500';
 import { Box, CircularProgress, Container } from '@mui/material';
 import { ShowContests } from '../../components/Contests/ShowContests';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { ProblemPage } from '../../components/Contests/ProblemPage';
+import { Contests } from './Contests';
 
 export const LoadContest = () => {
     const { id } = useParams();
     const [loading, setLoading] = useState(false);
     const [allTimeData, setData] = useState();
     const [mathJaxRendered, setMathJaxRendered] = useState(false);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const url = `http://localhost:5000/scrap/getData?contestId=${id}`;
         const init = async () => {
@@ -43,9 +44,7 @@ export const LoadContest = () => {
             );
         }
         else {
-            return (
-                <Page500 />
-            );
+            navigate('/contests')
         }
     }
 
