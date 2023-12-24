@@ -192,6 +192,10 @@ export const data = [
                 handle: 'the_hyp0cr1t3',
                 color: 'violet',
             },
+            {
+                handle: 'KitasCraft',
+                color: 'blue',
+            },
         ],
         contestId: 21,
         Id: 104502
