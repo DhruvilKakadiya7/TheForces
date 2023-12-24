@@ -24,26 +24,27 @@ const columns = [
         name: "Rank",
         key: "rank",
         sort: 0,
-        align: "center",
+        align: "center"
     },
     {
         name: "Who",
         key: "who",
         sort: 0,
-        align: "left",
+        align: "left"
     },
     {
         name: "#",
         key: "count",
         sort: 0,
         align: "center",
+        desc: 'number of contests participated'
     },
     {
         name: "Previous Rank",
         key: "prevRank",
         sort: 1,
         sortkey: 0,
-        align: "center",
+        align: "center"
     },
     {
         name: "Δ",
@@ -51,6 +52,7 @@ const columns = [
         sort: 1,
         sortkey: 1,
         align: "center",
+        desc: 'rating change'
     },
     {
         name: "=",
@@ -58,12 +60,13 @@ const columns = [
         sort: 1,
         sortkey: 2,
         align: "center",
+        desc: 'current rating'
     },
     {
         name: null,
         key: "change",
         sort: 0,
-        align: "center",
+        align: "center"
     }
 ];
 
@@ -209,7 +212,12 @@ function LeaderBoard({ arrangedData }) {
                                 {columns.map((column, i) => {
                                     return (
                                         <TableCell align={column.align} key={i}>
-                                            <Typography sx={{ fontWeight: "700", fontSize: "1.1em" }}>{column.name}</Typography>
+                                            <Typography 
+                                                sx={{ fontWeight: "700", fontSize: "1.1em" }} 
+                                                title={column.desc}
+                                            >
+                                                {column.name}
+                                            </Typography>
                                         </TableCell>
                                     );
                                 })}
