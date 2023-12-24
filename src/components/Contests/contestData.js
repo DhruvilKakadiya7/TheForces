@@ -167,7 +167,7 @@ export const data = [
             },
             {
                 handle: 'JaberSH1',
-                color: 'pupil',
+                color: 'green',
             },
         ],
         contestId: 22,
