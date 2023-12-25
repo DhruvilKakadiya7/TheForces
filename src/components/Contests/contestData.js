@@ -167,7 +167,7 @@ export const data = [
             },
             {
                 handle: 'JaberSH1',
-                color: 'pupil',
+                color: 'green',
             },
         ],
         contestId: 22,
@@ -191,6 +191,10 @@ export const data = [
             {
                 handle: 'the_hyp0cr1t3',
                 color: 'violet',
+            },
+            {
+                handle: 'KitasCraft',
+                color: 'blue',
             },
         ],
         contestId: 21,
