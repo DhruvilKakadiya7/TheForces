@@ -23,6 +23,7 @@ const BlockEquation = (props) => {
     )
 };
 
+// eslint-disable-next-line
 const BlockCode = ({ children, className }) => {
     const language = className ? className.replace('language-', '') : 'cpp';
 

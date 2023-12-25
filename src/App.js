@@ -9,9 +9,9 @@ import Page404 from "./components/Page404";
 
 import "./App.css";
 import { Home } from "./pages/Home/Home";
-import { Admin } from "./pages/Admin/Admin";
+// import { Admin } from "./pages/Admin/Admin";
 import { Rating } from "./pages/Rating/Rating";
-import { Profiles } from "./pages/Profiles/Profiles";
+// import { Profiles } from "./pages/Profiles/Profiles";
 import { ShowProfile } from "./pages/Profiles/ShowProfile";
 import ComingSoon from "./components/ComingSoon";
 import usePageTracking from "./usePackageTacking";
