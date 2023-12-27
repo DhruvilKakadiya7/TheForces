@@ -246,28 +246,6 @@ export const data = [
         contestId: 19,
         Id: 104455
     },
-    // {
-    //     contestName: "TheForces Round #18 (JuneIsApril-Forces)",
-    //     writers: [  // -kirito-, Parisa_Amiri, Big_Soul and vikram108.
-    //         {
-    //             handle: '-kirito-',
-    //             color: 'orange',
-    //         },
-    //         {
-    //             handle: 'Psychotic_D',
-    //             color: 'orange',
-    //         },
-    //         {
-    //             handle: 'vikram108',
-    //             color: 'violet',
-    //         },
-    //         {
-    //             handle: 'Big_Soul',
-    //             color: 'violet',
-    //         },
-    //     ],
-    //     contestId: 18
-    // },
     {
         contestName: "TheForces Round #17 (AOE-Forces)",
         writers: [  //  noomaK, Parisa_Amiri and lakshya7878.
@@ -401,3 +379,62 @@ export const data = [
         Id: 104301
     },
 ]
+
+export const officialContests = [
+    {
+        contestName: "Harbour.Space Scholarship Contest 2023-2024 (Div. 1 + Div. 2)",
+        writers: [  
+            // Amir_Parsa, AquaMoon, JohnVictor, Lavine, MagicalFlower, ODT, Psychotic_D, RiverHamster, amenotiomoi, ugly2333, chromate00, wuhudsm.
+            {
+                handle: 'Amir_Parsa',
+                color: 'orange',
+            },
+            {
+                handle: 'AquaMoon',
+                color: 'orange',
+            },
+            {
+                handle: 'JohnVictor',
+                color: 'orange',
+            },
+            {
+                handle: 'Lavine',
+                color: 'orange',
+            },
+            {
+                handle: 'MagicalFlower',
+                color: 'legendary',
+            },
+            {
+                handle: 'ODT',
+                color: 'orange',
+            },
+            {
+                handle: 'Psychotic_D',
+                color: 'orange',
+            },
+            {
+                handle: 'RiverHamster',
+                color: 'red',
+            },
+            {
+                handle: 'amenotiomoi',
+                color: 'red',
+            },
+            {
+                handle: 'ugly2333',
+                color: 'legendary',
+            },
+            {
+                handle: 'chromate00',
+                color: 'blue',
+            },
+            {
+                handle: 'wuhudsm',
+                color: 'violet',
+            },
+        ],
+        contestId: "o1",
+        Id: 1864
+    },
+];
