@@ -1,5 +1,4 @@
 import { Box, Button, Tab, Tabs, Typography, useMediaQuery } from '@mui/material'
-// import {makeStyle} from '@mui/style'
 import React, { useState } from 'react'
 import Problem from './ProblemTabs';
 import { useTheme } from '@emotion/react';
@@ -24,17 +23,6 @@ function TabPanel(props) {
     );
 }
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       flexGrow: 1,
-//     },
-//     tabs: {
-//       [theme.breakpoints.down('sm')]: {
-//         flexDirection: 'column',
-//       },
-//       flexWrap: 'wrap', // Allow tabs to wrap onto the next line
-//     },
-//   }));
 export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
@@ -43,7 +31,7 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     // const classes = useStyles();
-
+    console.log(data.problems[0]);
     return (
         <div style={{
             width: "100%",
@@ -68,7 +56,7 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
                         <Tab
                             fontSize={'1.4rem'}
                             key={idx}
-                            label={String.fromCharCode(65 + idx)}
+                            label={obj.problemName.match(/^(.*?)\./)[1].replace(/<div class="title">/,'')}
                             sx={{
                                 maxWidth: '100%',
                                 overflowX: 'auto',
@@ -80,6 +68,7 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
                 })}
             </Tabs>
             {data.problems?.map((obj, idx) => {
+                let problemIdx = obj.problemName.match(/^(.*?)\./)[1].replace(/<div class="title">/,'');
                 return (
                     <TabPanel value={value} index={idx}>
                         <Problem problem={data.problems[idx]} onMathJaxRendered={onMathJaxRendered} mathJaxRendered={mathJaxRendered} />
@@ -92,7 +81,10 @@ export const ProblemPage = ({ data, mathJaxRendered, onMathJaxRendered }) => {
                                     component="a"
                                     sx={{ fontSize: '1em', color: "text.default" }}
                                     className={`sub-button`}
-                                    href={`https://codeforces.com/gym/${data.contestId}`}
+                                    href={data.contestId < 3000 ? 
+                                        `https://codeforces.com/contest/${data.contestId}/submit/${problemIdx}` :
+                                        `https://codeforces.com/gym/${data.contestId}/submit/${problemIdx}`
+                                    }
                                     target='_blank'
                                 >
                                     Submit
