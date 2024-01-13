@@ -23,7 +23,7 @@ export default function AboutUs() {
     return (
         <div style={styles}>
 
-            <div style={{ "textAlign": "center" }}>
+            <div style={{ "textAlign": "center", "margin": "auto", "width": "80%" }}>
                 <div>
                     <h3>
                         Empowering Competitive Programmers Community

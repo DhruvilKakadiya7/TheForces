@@ -34,12 +34,13 @@ const pages = [
         color: "white",
         miniColor: "gray",
     },
-    {
-        name: "ProblemSet",
-        route: "problemset",
-        color: "white",
-        miniColor: "gray",
-    },
+    // },
+    // {
+    //     name: "ProblemSet",
+    //     route: "problemset",
+    //     color: "white",
+    //     miniColor: "gray",
+    // },
     {
         name: "Ratings",
         route: "ratings",
