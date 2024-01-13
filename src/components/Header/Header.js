@@ -46,12 +46,12 @@ const pages = [
         color: "yellow",
         miniColor: "red",
     },
-    // {
-    //     name: "About Us",
-    //     route: "about",
-    //     color: "white",
-    //     miniColor: "gray",
-    // },
+    {
+        name: "About Us",
+        route: "about",
+        color: "white",
+        miniColor: "gray",
+    },
 ];
 
 const Header = () => {
@@ -147,7 +147,7 @@ const Header = () => {
                             }}
                             onClick={() => navigate("")}
                         >
-                            <div className="logo-container" style={{ marginTop: '3px'}}>
+                            <div className="logo-container" style={{ marginTop: '3px' }}>
                                 <img src={LOGO} width="50px" alt="TheForces logo" />
                             </div>
                             <Typography
@@ -164,7 +164,7 @@ const Header = () => {
                             </Typography>
                         </div>
                     </Box>
-                    
+
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
                         {pages.map((page) => (
                             <Button
