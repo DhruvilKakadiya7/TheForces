@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from "@mui/material/Container";
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import { useTheme } from "@mui/material";
 export default function AboutUs() {
-
+    const theme = useTheme();
+    const [styles, setStyles] = useState({
+        "background": theme.palette.background.default,
+        "color": theme.palette.text.primary,
+        "height": "100vh"
+    });
+    useEffect(() => {
+        setStyles((prev) => {
+            return (
+                {
+                    ...prev,
+                    "background": theme.palette.background.default,
+                    "color": theme.palette.text.primary
+                })
+        })
+    }, [theme.palette.mode]);
     return (
-        <div>
-            <Container>
-                <div style={{ "textAlign": "center" }}>
+        <div style={styles}>
+
+            <div style={{ "textAlign": "center" }}>
+                <div>
                     <h3>
                         Empowering Competitive Programmers Community
                         <div>------------------------------------------------------------------</div>
@@ -40,8 +57,7 @@ export default function AboutUs() {
                     </span>
                 </Typography>
 
-            </Container>
-
+            </div>
         </div>
     )
 }
