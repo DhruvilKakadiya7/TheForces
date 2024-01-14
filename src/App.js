@@ -17,6 +17,7 @@ import ComingSoon from "./components/ComingSoon";
 import usePageTracking from "./usePackageTacking";
 import { Contests } from "./pages/Contests/Contests";
 import { LoadContest } from "./pages/Contests/LoadContest";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function MyApp() {
   usePageTracking();
@@ -28,11 +29,12 @@ function MyApp() {
           <Route path="/" element={<Home />} />
           <Route path="/ratings" element={<Rating />} />
           <Route path="/profile/:handle" element={<ShowProfile />} />
-          <Route path="*" element={<Page404 />} />
-          <Route path="/blogs" element={<ComingSoon/>}/>
-          <Route path="/contests" element={<Contests/>}/>
-          <Route path="contest/:id" element={<LoadContest/>}/>
-          <Route path="/problemset" element={<ComingSoon/>}/>
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/*" element={<Page404 />} />
+          <Route path="/blogs" element={<ComingSoon />} />
+          <Route path="/contests" element={<Contests />} />
+          <Route path="contest/:id" element={<LoadContest />} />
+          <Route path="/problemset" element={<ComingSoon />} />
         </Routes>
       </div>
     </div>

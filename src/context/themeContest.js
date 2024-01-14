@@ -1,2 +1,2 @@
 import React from "react";
-export const themeContext = React.createContext({ toggleColorMode: () => {} });
+export const themeContext = React.createContext();
